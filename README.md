@@ -1,4 +1,4 @@
-# codemask-lamda-layers
+# codemask-lambda-layers
 
 # Problem:
 Bundling python packages (requests, redis, ...) together with lambda functions:
