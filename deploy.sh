@@ -11,5 +11,5 @@ if [ $(dirname $0) = "." ]; then
         sls deploy --stage $1
     fi
 else
-    echo "error: you must cd to 'layers' folder to run this script"
+    echo "error: you must be in the same folder to run this script"
 fi
