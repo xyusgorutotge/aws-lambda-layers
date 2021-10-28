@@ -1,0 +1,17 @@
+service: codemask-lambda-layers
+frameworkVersion: '2'
+
+provider:
+  name: aws  
+  stage: ${opt:stage, 'dev'}
+  region: ${file(./config.dev.json):aws-region, 'us-west-2'}
+  profile: ${file(./config.dev.json):aws-profile, 'codemask_dev'}
+  runtime: python3.8
+
+layers:
+  common:
+    path: common
+    name: ${sls:stage}-common-layers
+    description: including redis, requests packages
+    compatibleRuntimes:
+      - python3.8
